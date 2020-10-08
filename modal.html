@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <title>Document</title>
+</head>
+<body>
+  <div class="color">
+    <h1 id='text'>hello</h1>
+  
+    
+</div>
+<button id="btn" type="submit">click me </button>
+<button onclick="window.location.reload();">refresh</button>
+     <style>
+        .color {
+            background-color: green;
+            width: 250px;
+            height:100px;
+            text-align: center;
+            border: 1px solid #000;
+            text-rendering: 'greeen';
+        }
+
+        button {
+            position: relative;
+            left:75px;
+             margin: 20px;
+        }
+     </style>
+     <script>
+    var btn = document.getElementById('btn');
+    var colorx = document.getElementsByClassName('color')[0]
+     const randomColor = ['yellow','gold','pink','blue','lightpurple']
+     const random = Math.floor(Math.random() * randomColor.length);
+     var text = document.getElementById('text')
+    btn.onclick = function() {
+        colorx.style.background = randomColor[random];
+      btn.innerHTML = "Doesn't work any more !!"
+        
+    }
+
+     </script>
+   
+</body>
+</html>
